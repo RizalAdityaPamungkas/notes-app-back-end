@@ -1,0 +1,2 @@
+- [x] Edit src/server.js to load environment variables from .prod.env using dotenv
+- [x] Test the server by running npm run start:prod to verify it runs on port 3000
