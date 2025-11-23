@@ -13,8 +13,13 @@
         "no-console": "off",
         "linebreak-style": "off",
         "no-underscore-dangle": "off",
+<<<<<<< HEAD
+        "camelcase": "off"
+=======
         "no-unused-vars": "off",
-        "import/no-extraneous-dependencies": "off"
+        "import/no-extraneous-dependencies": "off",
+        "camelcase": "off"
 
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
     }
 }
