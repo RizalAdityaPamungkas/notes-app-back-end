@@ -2,7 +2,10 @@
   "name": "notes-app-back-end",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "index.js",
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
   "scripts": {
     "start:prod": "NODE_ENV=production node ./src/server.js",
     "start:dev": "nodemon ./src/server.js",
@@ -13,13 +16,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+<<<<<<< HEAD
     "eslint": "^8.53.0",
+=======
+    "eslint": "^8.52.0",
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.0",
     "nodemon": "^3.0.1"
   },
   "dependencies": {
     "@hapi/hapi": "^21.3.2",
+<<<<<<< HEAD
     "@hapi/jwt": "^3.2.0",
     "amqplib": "^0.10.9",
     "bcrypt": "^5.1.1",
@@ -29,4 +37,24 @@
     "node-pg-migrate": "^6.2.2",
     "pg": "^8.11.3"
   }
+=======
+    "@hapi/jwt": "^3.2.1",
+    "auto-bind": "^4.0.0",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "joi": "^18.0.1",
+    "nanoid": "^3.1.20",
+    "node-pg-migrate": "^8.0.3",
+    "pg": "^8.16.3"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RizalAdityaPamungkas/notes-app-back-end.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RizalAdityaPamungkas/notes-app-back-end/issues"
+  },
+  "homepage": "https://github.com/RizalAdityaPamungkas/notes-app-back-end#readme"
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
 }

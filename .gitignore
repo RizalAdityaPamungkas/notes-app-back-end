@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 .env
 .node_modules/
+=======
+node_modules/
+notes-api-web-server.pem
+.env
+.prod.env
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3

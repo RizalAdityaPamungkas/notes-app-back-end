@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /* eslint-disable no-unused-vars */
+=======
+const autoBind = require('auto-bind');
+const ClientError = require('../../exceptions/ClientError');
+
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
 class AuthenticationsHandler {
   constructor(authenticationsService, usersService, tokenManager, validator) {
     this._authenticationsService = authenticationsService;
@@ -6,9 +12,13 @@ class AuthenticationsHandler {
     this._tokenManager = tokenManager;
     this._validator = validator;
 
+<<<<<<< HEAD
     this.postAuthenticationHandler = this.postAuthenticationHandler.bind(this);
     this.putAuthenticationHandler = this.putAuthenticationHandler.bind(this);
     this.deleteAuthenticationHandler = this.deleteAuthenticationHandler.bind(this);
+=======
+    autoBind(this);
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
   }
 
   async postAuthenticationHandler(request, h) {

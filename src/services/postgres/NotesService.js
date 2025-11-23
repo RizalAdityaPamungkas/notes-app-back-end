@@ -1,6 +1,7 @@
 const { Pool } = require('pg');
 const { nanoid } = require('nanoid');
 const InvariantError = require('../../exceptions/InvariantError');
+<<<<<<< HEAD
 const NotFoundError = require('../../exceptions/NotFoundError');
 const AuthorizationError = require('../../exceptions/AuthorizationError');
 const { mapDBToModel } = require('../../utils');
@@ -9,6 +10,15 @@ class NotesService {
   constructor(collaborationService) {
     this._pool = new Pool();
     this._collaborationService = collaborationService;
+=======
+const { mapDBToModel } = require('../../utils');
+const NotFoundError = require('../../exceptions/NotFoundError');
+const AuthorizationError = require('../../exceptions/AuthorizationError');
+
+class NotesService {
+  constructor() {
+    this._pool = new Pool();
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
   }
 
   async addNote({
@@ -34,10 +44,14 @@ class NotesService {
 
   async getNotes(owner) {
     const query = {
+<<<<<<< HEAD
       text: `SELECT notes.* FROM notes
     LEFT JOIN collaborations ON collaborations.note_id = notes.id
     WHERE notes.owner = $1 OR collaborations.user_id = $1
     GROUP BY notes.id`,
+=======
+      text: 'SELECT * FROM notes WHERE owner = $1',
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
       values: [owner],
     };
     const result = await this._pool.query(query);
@@ -46,10 +60,14 @@ class NotesService {
 
   async getNoteById(id) {
     const query = {
+<<<<<<< HEAD
       text: `SELECT notes.*, users.username
     FROM notes
     LEFT JOIN users ON users.id = notes.owner
     WHERE notes.id = $1`,
+=======
+      text: 'SELECT * FROM notes WHERE id = $1',
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
       values: [id],
     };
     const result = await this._pool.query(query);
@@ -102,6 +120,7 @@ class NotesService {
       throw new AuthorizationError('Anda tidak berhak mengakses resource ini');
     }
   }
+<<<<<<< HEAD
 
   async verifyNoteAccess(noteId, userId) {
     try {
@@ -126,6 +145,8 @@ class NotesService {
     const result = await this._pool.query(query);
     return result.rows;
   }
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
 }
 
 module.exports = NotesService;

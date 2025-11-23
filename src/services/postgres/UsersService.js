@@ -60,7 +60,10 @@ class UsersService {
       text: 'SELECT id, password FROM users WHERE username = $1',
       values: [username],
     };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
     const result = await this._pool.query(query);
 
     if (!result.rows.length) {
@@ -68,7 +71,10 @@ class UsersService {
     }
 
     const { id, password: hashedPassword } = result.rows[0];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
     const match = await bcrypt.compare(password, hashedPassword);
 
     if (!match) {

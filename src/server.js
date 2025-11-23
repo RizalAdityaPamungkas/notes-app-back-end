@@ -1,26 +1,39 @@
+<<<<<<< HEAD
 // mengimpor dotenv dan menjalankan konfigurasinya
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
 require('dotenv').config();
 
 const Hapi = require('@hapi/hapi');
 const Jwt = require('@hapi/jwt');
 
+<<<<<<< HEAD
 // notes
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
 const notes = require('./api/notes');
 const NotesService = require('./services/postgres/NotesService');
 const NotesValidator = require('./validator/notes');
 const ClientError = require('./exceptions/ClientError');
 
+<<<<<<< HEAD
 // users
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
 const users = require('./api/users');
 const UsersService = require('./services/postgres/UsersService');
 const UsersValidator = require('./validator/users');
 
+<<<<<<< HEAD
 // authentications
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
 const authentications = require('./api/authentications');
 const AuthenticationsService = require('./services/postgres/AuthenticationsService');
 const TokenManager = require('./tokenize/TokenManager');
 const AuthenticationsValidator = require('./validator/authentications');
 
+<<<<<<< HEAD
 // collaborations
 const collaborations = require('./api/collaborations');
 const CollaborationsService = require('./services/postgres/CollaborationsService');
@@ -34,10 +47,19 @@ const ExportsValidator = require('./validator/exports');
 const init = async () => {
   const collaborationsService = new CollaborationsService();
   const notesService = new NotesService(collaborationsService);
+=======
+const init = async () => {
+  const notesService = new NotesService();
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
   const usersService = new UsersService();
   const authenticationsService = new AuthenticationsService();
 
   const server = Hapi.server({
+<<<<<<< HEAD
+=======
+    // port: 3000,
+    // host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
     port: process.env.PORT,
     host: process.env.HOST,
     routes: {
@@ -95,6 +117,7 @@ const init = async () => {
         validator: AuthenticationsValidator,
       },
     },
+<<<<<<< HEAD
     {
       plugin: collaborations,
       options: {
@@ -110,6 +133,8 @@ const init = async () => {
         validator: ExportsValidator,
       },
     },
+=======
+>>>>>>> 71373e2eea6ecad6f5839ab99c9ddcfe385ba8a3
   ]);
 
   server.ext('onPreResponse', (request, h) => {
